@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - given-names: "Martin"
+    family-names: "Schuck"
+  - given-names: "Orrin"
+    family-names: "Dahanaggamaarachchi"
+  - given-names: "Ben"
+    family-names: "Sprenger"
+  - given-names: "Ben"
+    family-names: "Sprenger"
+  - given-names: "Vedant"
+    family-names: "Vyas"
+  - given-names: "Siqi"
+    family-names: "Zhou"
+  - given-names: "Angela P."
+    family-names: "Schoellig"
+title: "SwarmGPT: Combining Large Language Models with Safe Motion Planning for Drone Swarm Choreography"
+version: 1.0.0
+date-released: 2025-10-10

@@ -1,0 +1,20 @@
+wave: |
+  The disturbance \(u(s, t)\) at any point \(s = (s_1, s_2) \in [0, a] \times [0, b]\) 
+  at time \(t\) is governed by:
+  \[
+  c^2 \nabla^2 u(s, t) = \frac{\partial^2 u(s, t)}{\partial t^2},
+  \]
+  where \( \nabla^2 \) is the spatial Laplacian and \(c > 0\) is the wave speed. 
+  The solution:
+  \[
+  u(s, t) = \sum_{(\mu_1, \mu_2)} a_{\mu_1 \mu_2} \sin \left( \frac{\mu_1 \pi s_1}{a} \right) 
+  \sin \left( \frac{\mu_2 pi s_2}{b} \right) \sin(\omega_{\mu_1 \mu_2} t) 
+  + b_{\mu_1 \mu_2} \sin \left( \frac{\mu_1 \pi s_1}{a} \right) 
+  \sin \left( \frac{\mu_2 \pi s_2}{b} \right) \cos(\omega_{\mu_1 \mu_2} t),
+  \]
+
+  with frequencies:
+
+  \[
+  \omega_{\mu_1 \mu_2}^2 = c^2 \pi^2 \left( \frac{\mu_1^2}{a^2} + \frac{\mu_2^2}{b^2} \right).
+  \]

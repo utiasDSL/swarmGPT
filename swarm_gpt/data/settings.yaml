@@ -1,0 +1,79 @@
+starting_height: 1.0  # Starting height for all drones
+sim_freq: 400 # Frequency for the crazyflow simulation
+attitude_freq: 400 # Frequency for the crazyflow simulation for the drone attitudes
+state_freq: 80 # Frequency for the crazyflow simulation for the drone states
+
+axswarm:
+  rho_init: 1.0 # Initial value of the penalty parameter
+  rho_max: 1000.0 # Maximum value of the penalty parameter
+  max_iters: 1000 # Maximum number of iterations
+
+  # Constraints
+  pos_constraints: hard  # Either hard, soft or false
+  vel_constraints: false
+  acc_constraints: false
+  input_continuity_constraints: hard
+  max_collisions: 10
+
+  # Weights
+  pos_weight: 1.0  # Weight of the position tracking objective in the cost
+  vel_weight: 0.0  # Weight of the velocity tracking objective in the cost
+  acc_weight: 0.0  # Weight of the acceleration tracking objective in the cost
+  smoothness_weight: 10.0  # Weight of the smoothness objective in the cost
+  input_smoothness_weight: 10.0  # Weight of the input smoothness objective in the cost
+  input_continuity_weight: 1.0  # Weight of the input continuity objective in the cost
+
+  # Limits. TODO: Reset back to 2, 2, 2
+  pos_min: [-3, -3, 0.1]  # Minimum position of the AMSwarm drones
+  pos_max: [3, 3, 2]  # Maximum position of the AMSwarm drones
+  vel_max: 1.73  # Maximum velocity of the AMSwarm drones
+  acc_max: 1.0  # Maximum force of the AMSwarm drones (0.75 gs)
+  collision_envelope: [0.15, 0.15, 0.15]  # Collision envelope width in x, y, z
+
+  # MPC
+  K: 50  # Number of timesteps in the optimization horizon
+  N: 10  # Spline order for AMSwarm trajectories
+  freq: 8  # MPC control frequency of AMSwarm in Hz
+  bf_gamma: 1.0  # Barrier function gamma [0, 1.0] -> 1.0 is most aggressive
+  waypoints_pos_tol: 0.1  # Tolerance for the waypoints position constraint
+  waypoints_vel_tol: 0.01  # Tolerance for the waypoints velocity constraint
+  waypoints_acc_tol: 0.01  # Tolerance for the waypoints acceleration
+  pos_limit_tol: 0.01  # Tolerance for the input position constraint
+  vel_limit_tol: 0.01  # Tolerance for the input velocity constraint
+  acc_limit_tol: 0.01  # Tolerance for the input acceleration
+  input_continuity_tol: 0.01  # Tolerance for the input continuity constraint
+  collision_tol: 0.01  # Tolerance for the collision avoidance constraint
+
+Dynamics:
+  # --- 8Hz pos + vel input model, with >=80Hz Mellinger controller --- #
+  A:
+    - [1,0,0,0.125,0,0]
+    - [0,1,0,0,0.125,0]
+    - [0,0,1,0,0,0.125]
+    - [-0.469716696685181,0,0,0.149713435888023,0,0]
+    - [0,-0.469716696685181,0,0,0.149713435888023,0]
+    - [0,0,-0.397325602722636,0,0,0.171250881110332]
+
+  B:
+    - [7.9606175428763e-06,0,0,0.00150944895427476,0,0]
+    - [0,7.9606175428763e-06,0,0,0.00150944895427476,0]
+    - [0,0,4.76396361611788e-05,0,0,0.010812192313681]
+    - [0.466088247600246,0,0,0.808977631441999,0,0]
+    - [0,0.466088247600246,0,0,0.808977631441999,0]
+    - [0,0,0.396304015071527,0,0,0.728802890854867]
+
+  A_prime:
+    - [-0.3546, 0, 0, 0.3765, 0, 0]
+    - [0, -0.3546, 0, 0, 0.3765, 0]
+    - [0, 0, -0.2959, 0, 0, 0.3979]
+    - [-1.4146, 0, 0, -2.9154, 0, 0]
+    - [0, -1.4146, 0, 0, -2.9154, 0]
+    - [0, 0, -1.2648, 0, 0, -2.9341]
+
+  B_prime:
+    - [0.3519, 0.0000, 0.0000, 0.6230, 0.0000, 0.0000]
+    - [0.0000, 0.3519, 0.0000, 0.0000, 0.6230, 0.0000]
+    - [0.0000, 0.0000, 0.2956, 0.0000, 0.0000, 0.6306]
+    - [1.4037, 0.0000, 0.0000, 2.4321, 0.0000, 0.0000]
+    - [0.0000, 1.4037, 0.0000, 0.0000, 2.4321, 0.0000]
+    - [0.0000, 0.0000, 1.2615, 0.0000, 0.0000, 2.2944]

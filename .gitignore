@@ -1,0 +1,19 @@
+.vscode
+*.pyc
+*/**__pycache__
+swarm_gpt.egg-info
+saves
+# !saves/sim2real.bag*
+#!saves/.gitkeep
+**/.ipynb_checkpoints
+**.mp4
+!/docs
+!/docs/media
+!/docs/media/video
+!/docs/media/video/*.mp4
+backup
+build
+sandbox/
+/data/
+/video
+site
