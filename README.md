@@ -1,8 +1,8 @@
 # SwarmGPT
 
 ![swarm_gpt_banner](/docs/img/swarm_gpt_banner.png)
-[![Format Check](https://github.com/utiasDSL/swarm_GPT/actions/workflows/ruff.yaml/badge.svg)](https://github.com/utiasDSL/swarm_GPT/actions/workflows/ruff.yaml)
-[![website](https://github.com/utiasDSL/swarm_GPT/actions/workflows/website.yaml/badge.svg)](https://github.com/utiasDSL/swarm_GPT/actions/workflows/website.yaml)
+[![Format Check](https://github.com/utiasDSL/swarmGPT/actions/workflows/ruff.yaml/badge.svg)](https://github.com/utiasDSL/swarmGPT/actions/workflows/ruff.yaml)
+[![website](https://github.com/utiasDSL/swarmGPT/actions/workflows/website.yaml/badge.svg)](https://github.com/utiasDSL/swarmGPT/actions/workflows/website.yaml)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 SwarmGPT integrates large language models (LLMs) with safe swarm motion planning, providing an automated and novel approach to deployable drone swarm choreography. Users can automatically generate synchronized drone performances through natural language instructions. Emphasizing safety and creativity, the system combines the creative power of generative models with the effectiveness and safety of model-based planning algorithms. For more information, visit the [project website](https://utiasdsl.github.io/swarm_GPT_dev/) or read our [paper](https://ieeexplore.ieee.org/document/11197931/).
@@ -29,8 +29,8 @@ SwarmGPT uses [Pixi](https://pixi.sh) for dependency management and environment 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/utiasDSL/swarm_GPT.git
-   cd swarm_GPT
+   git clone https://github.com/utiasDSL/swarmGPT.git
+   cd swarmGPT
    ```
 
 2. Install dependencies and set up the environment:

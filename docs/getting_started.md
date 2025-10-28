@@ -17,7 +17,7 @@ The following video explains how the framework works in greater depth:
 
 Overview
 
-1. Install [SwarmGPT :octicons-mark-github-24:](https://github.com/utiasDSL/swarm_GPT), the required packages and the other necessary repositories: [Crazyflow :octicons-mark-github-24:](https://github.com/utiasDSL/crazyflow), [Axswarm :octicons-mark-github-24:](https://github.com/utiasDSL/axswarm), [Crazyswarm :octicons-mark-github-24:](https://github.com/USC-ACTLab/crazyswarm).
+1. Install [SwarmGPT :octicons-mark-github-24:](https://github.com/utiasDSL/swarmGPT), the required packages and the other necessary repositories: [Crazyflow :octicons-mark-github-24:](https://github.com/utiasDSL/crazyflow), [Axswarm :octicons-mark-github-24:](https://github.com/utiasDSL/axswarm), [Crazyswarm :octicons-mark-github-24:](https://github.com/USC-ACTLab/crazyswarm).
 2. Enter the initial positions of the drones in the `crazyflies.yaml` configuration file.
 3. Run the interface and simulate and deploy the drones.
 
@@ -29,8 +29,8 @@ SwarmGPT requires ROS Noetic on Ubuntu 20.04 which does not harmonize with most 
 _... install from source:_
 
 ```bash
-git clone https://github.com/utiasDSL/swarm_GPT.git
-cd swarm_GPT
+git clone https://github.com/utiasDSL/swarmGPT.git
+cd swarmGPT
 ```
 
 _...optional: work in a new pixi environment_
@@ -42,13 +42,13 @@ pixi shell
 After your pixi environment is set up, the following ROS packages need to be installed:
 
 - crazyswarm: follow these [instructions](https://crazyswarm.readthedocs.io/en/latest/installation.html) - instructions must be replaced once githubio is set ups
-- axswarm: follow these [instructions](https://github.com/utiasDSL/swarm_GPT)
-- crazyflow: follow these [instructions](https://github.com/utiasDSL/swarm_GPT)
+- axswarm: follow these [instructions](https://github.com/utiasDSL/axswarm)
+- crazyflow: follow these [instructions](https://github.com/utiasDSL/crazyflow)
 
 
 ## 2. Configure the Drones
 
-The IDs of the crazyflies, their initial positions, and channels must be entered into `crazyflies.yaml`. This configuration file can be found in `swarm_GPT/ros_ws/src/crazyswarm/launch/crazyflies.yaml` and follows this structure:
+The IDs of the crazyflies, their initial positions, and channels must be entered into `crazyflies.yaml`. This configuration file can be found in `ros_ws/src/crazyswarm/launch/crazyflies.yaml` and follows this structure:
 
 ```yaml
 crazyflies:
@@ -61,7 +61,7 @@ crazyflies:
 
 ## 3. Run the Interface and Simulate and Deploy the Drones
 
-To run the interface navigate to `swarm_GPT/swarm_gpt` and run
+To run the interface navigate to `swarmGPT/swarm_gpt` and run
 
 ```bash
 python3 launch.py
@@ -75,5 +75,5 @@ From there you can select the song and have the LLM generate choreography for it
 
 Before you deploy the dances onto the crazyflies, run the communication launch in a separate terminal by `roslaunch crazyswarm hover_swarm.launch`. Don’t forget to source the ros_ws by source `ros_ws/devel/setup.bash`, if you get crazyswarm ros package is not recognized. Or you can put the source command into your `~/.bashrc` script.
 
-In addition, if you want to test if the crazyflies are properly connected, you can open a third terminal, navigate to `swarm_GPT/ros_ws/src/crazyswarm/scripts/` and execute `python3 niceHover.py`. It will hover all the connected crazyflies and land all of them once you press any button.
+In addition, if you want to test if the crazyflies are properly connected, you can open a third terminal, navigate to `ros_ws/src/crazyswarm/scripts/` and execute `python3 niceHover.py`. It will hover all the connected crazyflies and land all of them once you press any button.
 

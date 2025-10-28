@@ -13,7 +13,7 @@ description: A novel approach to choreographing the movements of drone swarms to
 
 **_If you use this work, please cite it using the [bibtex](#citing) below._**
 
-We run [SwarmGPT :simple-github:](https://github.com/utiasDSL/swarm_GPT) on crazyflies using [crazyswarm :simple-github:](https://github.com/USC-ACTLab/crazyswarm). We use [axswarm :simple-github:](https://github.com/utiasDSL/axswarm) as our safety filter to prevent crashes and simulate our swarms using [crazyflow :simple-github:](https://github.com/utiasDSL/crazyflow).
+We run [SwarmGPT :simple-github:](https://github.com/utiasDSL/swarmGPT) on crazyflies using [crazyswarm :simple-github:](https://github.com/USC-ACTLab/crazyswarm). We use [axswarm :simple-github:](https://github.com/utiasDSL/axswarm) as our safety filter to prevent crashes and simulate our swarms using [crazyflow :simple-github:](https://github.com/utiasDSL/crazyflow).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/a-4-afszP8w?si=Lc-KoX9rj08dIItP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 Drone swarm of 8 drones dancing to Clair de Lune by Claude Debussy.

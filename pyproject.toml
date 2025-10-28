@@ -41,7 +41,7 @@ include = ["swarm_gpt*"]
 test = ["pytest"]
 
 [project.urls]
-Repository = "https://github.com/utiasDSL/swarm_GPT"
+Repository = "https://github.com/utiasDSL/swarmGPT"
 
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.

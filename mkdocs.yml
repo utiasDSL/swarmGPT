@@ -9,7 +9,7 @@ nav:
   - About the Learning Systems Lab: about.md
   # - Test: crisp_controllers/classes.md
 
-repo_url: https://github.com/utiasDSL/swarm_GPT
+repo_url: https://github.com/utiasDSL/swarmGPT
 
 theme:
   name: material
